@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz do Milhão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <!-- TELA INICIAL -->
+    <section id="tela-inicio" class="tela ativa">
+      <h1>Quiz do Milhão</h1>
+      <p>Responda às 10 perguntas de dificuldade crescente e chegue ao prêmio máximo!</p>
+      
+      <label for="nome-jogador">Digite seu nome para começar:</label>
+      <input type="text" id="nome-jogador" placeholder="Seu nome..." required>
+      <p id="erro-nome" class="mensagem-erro"></p>
+      
+      <button id="btn-iniciar" class="btn-principal">Iniciar Partida</button>
+
+      <details class="fontes-box">
+        <summary>Fontes Consultadas</summary>
+        <ul>
+          <li>Livro Didático / Apostila da Disciplina (Exemplo: História Geral, Cap. 4).</li>
+          <li>Portal Brasil Escola / Toda Matéria (Artigos revisados).</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- TELA DO JOGO -->
+    <section id="tela-jogo" class="tela">
+      <header class="cabecalho-jogo">
+        <span id="info-jogador">Jogador: -</span>
+        <span id="info-progresso">Pergunta 1/10</span>
+        <span id="info-premio">Prêmio: R$ 0</span>
+      </header>
+
+      <div class="nivel-tag" id="info-nivel">Nível: Fácil</div>
+      <h2 id="texto-pergunta">Enunciado da pergunta aqui...</h2>
+
+      <!-- AJUDAS DO MILHÃO -->
+      <div class="ajudas-container">
+        <button id="ajuda-eliminar" class="btn-ajuda">Eliminar 2 (1x)</button>
+        <button id="ajuda-dica" class="btn-ajuda">Ver Dica (1x)</button>
+        <button id="ajuda-pular" class="btn-ajuda">Pular (1x)</button>
+      </div>
+      <p id="texto-dica" class="dica-box oculto"></p>
+
+      <!-- ALTERNATIVAS -->
+      <div id="alternativas-container" class="alternativas"></div>
+
+      <!-- FEEDBACK E EXPLICAÇÃO -->
+      <div id="feedback-container" class="feedback oculto">
+        <p id="feedback-status"></p>
+        <p id="feedback-explicacao"></p>
+        <button id="btn-proxima" class="btn-principal">Próxima Pergunta</button>
+      </div>
+    </section>
+
+    <!-- TELA FINAL -->
+    <section id="tela-final" class="tela">
+      <h1>Fim de Jogo!</h1>
+      <p id="resumo-jogador"></p>
+      <p id="resumo-acertos"></p>
+      <p id="resumo-premio" class="premio-destaque"></p>
+      <button id="btn-reiniciar" class="btn-principal">Jogar Novamente</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
